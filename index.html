@@ -293,7 +293,7 @@
               <p class="block-description">Вы можете забрать товар сами,</br>
                   заехав в наш офис:</p>
             <img src="images/map/google.png" alt="map" height="158" width="300">
-            <a  class="red-btn contact-btn" href="#">Заблудились? НапиШИТЕ НАМ!</a>
+            <a  class="red-btn contact-btn" id="contact-btn" href="#">Заблудились? НапиШИТЕ НАМ!</a>
         </div>
     </section>
 </main>
@@ -360,5 +360,36 @@
 </div>
 </footer>
 
+<div class="modal contact-modal" id="contact-modal">
+    <span class="btn-close" id="btn-close">BUTTON CLOSE</span>
+    <form action="#" class="contact-form">
+        <p class="form-field">
+            <label for="username">Ваше имя:
+                <input type="text" id="username" value="" placeholder="Представьтесь, пожалуйста"/>
+            </label>
+        </p>
+        <p class="form-field">
+            <label for="email">Ваш e-mail:
+                <input type="text" id="email" value="" placeholder="Для отправки ответа"/>
+            </label>
+        </p>
+        <p class="form-field">
+            <label for="content">Текст письма:
+                <textarea id="content" name="content" rows="6" cols="55" placeholder="В свободной форме">
+                </textarea>
+            </label>
+        </p>
+        <input type="submit" value="ОТПРАВИТЬ" class="red-btn contact-btn"/>
+    </form>
+</div>
+
+<script>
+    document.getElementById("contact-btn").onclick=function () {
+        document.getElementById("contact-modal").style.display="flex";
+    }
+    document.getElementById("btn-close").onclick=function () {
+        document.getElementById("contact-modal").style.display="none";
+    }
+</script>
 </body>
 </html>

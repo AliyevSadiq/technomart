@@ -1127,6 +1127,7 @@ input[type=text]{
 }
 .contact-btn{
     width: 100%;
+    border: 0;
 }
 /*ABOUT WEBSITE*/
 /*MAIN CONTENT*/
@@ -1823,7 +1824,117 @@ footer{
 .page-active:hover{
     border-color: #ed3543;
 }
-
 /*PRODUCT SECTION*/
-
 /*SHOP PAGE*/
+
+
+/* MODAL SECTIONS*/
+
+/*CONTACT*/
+.modal{
+    position: fixed;
+
+
+}
+.btn-close{
+    font-size: 0;
+    cursor: pointer;
+
+
+}
+.btn-close:before,.btn-close:after{
+    position: absolute;
+    top: 15px;
+    right: 8px;
+    content: "";
+    height: 3px;
+    width: 19px;
+    display: block;
+    background: #ff5357;
+}
+.btn-close:before{
+    transform: rotate(45deg);
+}
+.btn-close:after{
+    transform: rotate(-45deg);
+}
+.contact-modal{
+    background-color: white;
+    width: 620px;
+    height: 423px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-top: 7px solid #ff5357;
+    z-index: 20;
+    bottom: 232px;
+    top: 100px;
+    left: 25%;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.contact-modal::after{
+     content: "";
+     width: 100%;
+     height: 112px;
+     display: block;
+     position: absolute;
+     bottom: 0;
+     background-color: #f3f3f3;
+}
+.contact-form{
+    display: flex;
+    width: 460px;
+    height: 345px;
+    flex-wrap: wrap;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.form-field{
+    margin: 0;
+}
+
+.form-field>label{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Cuprum","Regular",sans-serif;
+
+}
+.form-field>label>input[type=text]{
+    background-color: #ffffff;
+    border: 2px solid #dee3e4;
+    border-radius: 5px;
+    width: 216px;
+    height: 34px;
+    margin-top: 10px;
+}
+.form-field>label>textarea{
+    background-color: #ffffff;
+    border: 2px solid #dee3e4;
+    border-radius: 5px;
+    width: 452px;
+    min-height: 114px;
+    margin-top: 10px;
+    outline: none;
+}
+.form-field>label>input[type=text]::placeholder{
+    padding-left: 14px;
+}
+.form-field>label>input[type=text]:hover,.form-field>label>textarea:hover{
+    border-color: #b5b5b5;
+}
+.form-field>label>input[type=text]:focus,.form-field>label>textarea:focus{
+    border-color: #ed3543;
+}
+
+
+/*CONTACT*/
+
+
+
+/* MODAL SECTIONS*/
