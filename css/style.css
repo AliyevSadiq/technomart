@@ -822,14 +822,26 @@ input[type=text]{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     margin-bottom: 15px;
-}
-.main-price:after{
     position: relative;
-    left: 51px;
-    content: "";
-    border-top: 14px solid transparent;
-    border-left: 28px solid #ee3643;
-    border-bottom: 24px solid transparent;
+}
+
+.main-price:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+
+}
+
+.main-price:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-left-color: #ee3643;
+    border-width: 19px;
+    margin-top: -19px;
 }
 
 /*POPULAR PRODUCTS*/
